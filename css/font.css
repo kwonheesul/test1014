@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/*영문 폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*한글폰트*/
+@font-face {
+  font-family: "Noto Sans KR" ;
+  src: (link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet");
+  font-weight: normal;
+  font-style: normal;
+}

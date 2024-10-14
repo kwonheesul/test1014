@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/*공통*/
+#wrap{min-width: 320px; position: relative;}
+.inner{max-width: 1600px; margin: 0 auto; padding: 0 5% ;}
+
+/*header*/
+header .inner{display: flex; justify-content: space-between; align-items: flex-end; max-width: 100%;}
+header h1{margin-left: 9%; margin-top: 1%;}
+
+header .gnb{display: flex;}
+header .gnb > li{position: relative;}
+header .gnb > li::before{content: ""; display: block; width: 20px; height: 8px; background-color: #3bd9d9; 
+ position: absolute; left: 50%; top: -10px; transform: translateX(-50%); opacity: 0;
+transition: opacity 0.5s, top 0.2s;}
+header .gnb > li:hover:before{opacity: 1; top: 0;}
+header .gnb > li > a{display: block; padding: 10px 40px 15px; font-size: 2rem;}
+header .gnb > li:hover > a{color: #3bd9d9;}
+
+header .gnb .depth2{position: absolute; top: 55px; left: 50%; transform: translateX(-50%); 
+width: 500px; z-index: 99; display: flex; justify-content: center;}
+header .gnb .depth2 li a{display: block; padding: 15px; color:black; transition: color 0.5s;}
+header .gnb .depth2 li:hover a{color: #3bd9d9;}
+
+header .mgnb-wrap{position: fixed; top: 0; left: 100%; width: 100%; height: 100%; z-index: 9999; padding: 70px 5% 0; background-color: #fff;}
+header .mgnb-wrap .mgnb{border-top: 1px solid #000;}
+header .mgnb-wrap .mgnb > li{padding: 15px 0 10px; border-bottom: 1px solid #ddd; font-size: 2rem;}
+.mdepth2{padding: 10px 0 0 30px;}
+.mdepth2 > li{position: relative;}
+.mdepth2 > li::before{content: ""; display: block; width: 5px; height: 5px; background-color: #b0b0b0; 
+border-radius: 50%; position: absolute; top: 50%; left: -15px; transform: translateY(-50%);}
+.mdepth2 > li a{color: #3bd9d9; font-size: 1.4rem; display: block; padding: 3px 0;}
+
+.mgnb-close{position: absolute; top: 20px; right: 5%; cursor: pointer;}
+
+header .utill{display: flex; align-items: center; gap: 20px; padding-bottom: 15px;}
+header .utill > li{cursor: pointer;}
+header .utill > li img{width: 20px;}
+header .utill .ham{display: none;}
+
+/* 태블릿 */
+@media screen and (max-width : 1200px){
+  header h1{padding: 15px 0 10px;}
+  header h1 img{width: 100px;}
+  header .gnb{display: none;}
+  header .utill{padding-bottom: 22px;}
+  header .utill .sitemap{display: none;}
+  header .utill .ham{display: block;}
+}
+
+/* 모바일 */
+@media screen and (max-width : 768px){
+
+  header .utill li:last-child{display: none;}
+  
+}
+
+/*footer*/
+footer{padding: 100px 0; background-color: #b0b0b0;}
+footer img {padding: 1%;}
+footer footer-top{display: flex; justify-content: space-between;
+align-items: flex-end; padding-bottom: 10px; flex-wrap: wrap;} 
+footer .call{line-height: 2; padding-bottom: 10px;}
+footer ul{display: flex; flex-wrap: wrap; gap: 10px;}
+footer .footer-bottom{display: flex; justify-content: space-between; flex-wrap: wrap;
+border-top: 1px solid #ddd; padding-top: 20px;}
+footer address{padding: 10px 0 0; color:white; line-height: 2;}
+footer .copy{color: white;}
+footer .party {line-height: 2;}
+
+@media screen and (max-width: 1200px) {
+  footer{padding: 50px 0;}
+  footer .footer-top{gap: 20px;}
+  footer ul{gap: 20px;}
+  footer .footer-top > ul, footer .footer-top > p{width: 100%;} 
+  footer .call{text-align: right; line-height: 1;}
+  footer .footer-bottom > div, footer .footer-bottom > p{width: 100%; line-height: 1;}
+  footer .copy{padding-top: 20px; }
+  footer .party {line-height: 1;}
+}
